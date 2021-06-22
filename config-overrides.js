@@ -7,7 +7,10 @@ module.exports = override(
 	addLessLoader({
 		lessOptions: {
 			javascriptEnabled: true,
-			sourceMap: true
+			// 主题覆盖
+			modifyVars: {
+			
+			}
 		}
 	}),
 );
