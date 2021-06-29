@@ -4,11 +4,9 @@
  *
  * @模块用途: 创建错误提示页
  *
- * @创建人: ligaoming
- *
  * @date: 2021/6/22 17:39
  *
- * @版权所有: PGLI
+ * @版权所有: pgli
  *
  **********************************************************************/
 import React from 'react';
@@ -23,7 +21,7 @@ const Index: React.FC = () => {
 			<Result
 				imgUrl={'/GIyMDJnuqmcqPLpHCSkj.svg'}
 				title="无法完成操作"
-				message="缺少员工信息，请从新登录"
+				message="缺少员工信息，请回退重试"
 			/>
 		</React.Fragment>
 	)

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Error from './pages/Error';
 import * as serviceWorker from './serviceWorker';
-import './index.less';
-
 import {createHashHistory} from 'history';
+import MainContext from './Context';
+import './index.less';
 
 const history = createHashHistory();
 /**
@@ -32,8 +32,9 @@ const getQueryObjectByUrl = (url: string) => {
  * getQueryObjectByUrl(window.location.search)
  */
 const params = getQueryObjectByUrl(window.location.search);
-ReactDOM.render(params
-	? <App history={history}/>
+
+ReactDOM.render(JSON.stringify(params) !== '{}' || true
+	? <MainContext.Provider value={params}><App history={history}/></MainContext.Provider>
 	: <Error/>, document.getElementById('root'));
 
 
