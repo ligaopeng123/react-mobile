@@ -1,7 +1,6 @@
 /**
  * @函数名:List
  * @作用: 顾问列表
- * @params: mod
  */
 import React, {useContext, useEffect, useRef, useState} from 'react';
 import {ListView} from 'antd-mobile';
